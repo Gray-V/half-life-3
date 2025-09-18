@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hafe-Lief 3</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="game-container">
+    <!-- Start Screen -->
+    <div class="screen active" id="start-screen">
+      <div class="fake-hl-menu">
+        <div class="fake-lambda">λ</div>
+        <h1 class="fake-title">HAFE-LIEF 3</h1>
+        <div class="fake-subtitle">Blak Mesa Reserch Facalty</div>
+        <div class="fake-menu-options">
+          <div class="fake-menu-item" onclick="fakeMenuClick()">New Gaem</div>
+          <div class="fake-menu-item" onclick="fakeMenuClick()">Loed Gaem</div>
+          <div class="fake-menu-item" onclick="fakeMenuClick()">Oprions</div>
+          <div class="fake-menu-item active-menu" onclick="startGame()">Actualy Start</div>
+          <div class="fake-menu-item" onclick="fakeMenuClick()">Quit to Dosktop</div>
+        </div>
+        <div class="fake-warning">⚠️ BETA VERSION 0.003 - ERROR BUILD ⚠️</div>
+        <div class="fake-credits">Made by Volvo Software (definitely not Valve)</div>
+      </div>
+    </div>
+
+    <!-- Level 1 -->
+    <div class="screen" id="level1">
+      <div class="level-indicator">Level 1 of 3</div>
+      <h2 class="question">What comes after Half-Life 2?</h2>
+      <div class="options">
+        <button class="option-btn" onclick="wrongAnswer()">Half-Life 3</button>
+        <button class="option-btn" onclick="correctAnswer(2)">Half-Life 2: Lost Coast</button>
+        <button class="option-btn" onclick="wrongAnswer()">Portal</button>
+        <button class="option-btn" onclick="wrongAnswer()">Wouldn't you like to know weather boy?</button>
+      </div>
+      <p class="meme-text">*Valve's advanced mathematics*</p>
+    </div>
+
+    <!-- Level 2 -->
+    <div class="screen" id="level2">
+      <div class="level-indicator">Level 2 of 3</div>
+      <h2 class="question">What company created Half-Life?</h2>
+      <div class="options">
+        <button class="option-btn" onclick="correctAnswer(3)">Valve</button>
+        <button class="option-btn" onclick="wrongAnswer()">Toyota</button>
+        <button class="option-btn" onclick="wrongAnswer()">JAckBix Germs</button>
+        <button class="option-btn" onclick="wrongAnswer()">Mc Flurry</button>
+      </div>
+      <p class="meme-text">*Hint: Not the car company*</p>
+    </div>
+
+    <!-- Level 3: Error Screen -->
+    <div class="screen" id="level3">
+      <div class="level-indicator">Level ERROR of 3</div>
+      <h2 class="question">Womp Womp CRITICAL ERROR: Half-Life 3 build DOES NOT EXIST!</h2>
+      <div class="options">
+        <button class="option-btn" onclick="showScreen('level1')">Replay Level 1</button>
+        <button class="option-btn" onclick="showScreen('level2')">Replay Level 2</button>
+        <button class="option-btn" onclick="restartGame()">Return to Menu</button>
+        <button class="option-btn" onclick="restartGame()">Cry about it ig</button>
+      </div>
+      <p class="meme-text">*There's not going to be a swimming pool you stupid XXXX*</p>
+    </div>
+
+    <!-- Game Over -->
+    <div class="screen" id="game-over">
+      <h2 class="game-over">DELAYED INDEFINITELY</h2>
+      <p class="question">Half-Life 3 has been postponed due to this failure!</p>
+      <button class="start-btn" onclick="restartGame()">TRY AGAIN</button>
+      <p class="meme-text">*Thanks for nothing, Gordon*</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
